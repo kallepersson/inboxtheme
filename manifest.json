@@ -1,0 +1,26 @@
+{
+  "name": "Inbox theme for Gmail",
+  "description" : "Makes Gmail look and behave like Inbox",
+  "homepage_url": "http://flowapps.co/inboxnostalgia",
+  "author": "Kalle Persson",
+  "version": "1.0.0",
+  "icons": {
+    "16": "img/icon-256.png",
+    "19": "img/icon-256.png",
+    "38": "img/icon-256.png",
+    "48": "img/icon-256.png",
+    "128": "img/icon-256.png",
+    "256": "img/icon-256.png"
+  },
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "matches": [
+        "https://mail.google.com/*"
+      ],
+      "js": [
+        "in-min.js"
+      ]
+    }
+  ]
+}

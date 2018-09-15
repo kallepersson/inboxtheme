@@ -1,0 +1,46 @@
+/* Compose button */
+.aeN .z0> {
+  height: auto;
+}
+.aeN .z0>.L3 {
+  background-color: #d23f31;
+  height: 56px;
+  width: 56px;
+  border-radius:50%;
+  position: relative;
+  box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  z-index: 100;
+  text-indent: -9999px;
+  overflow: hidden;
+  padding: 0;
+}
+
+.aeN .z0>.L3::before /* Compose Icon */ ,
+.aeG /* Footer stats */ ,
+.gb_Be img.gb_Wa /* Gmail logo */,
+.gb_Ra .gb_Sa /* GSuite Logo */
+{
+  display: none !important;
+}
+
+/* GSuite button */
+.gb_Ra {
+  border: 0 !important;
+  width: auto !important;
+}
+
+/* Debug element */
+body::after {
+  display: block;
+  position: fixed;
+  bottom: 25px;
+  left: 0;
+  z-index: 9999;
+  background: rgba(0,0,0,0.3);
+  color: #fff;
+  font-family: monospace;
+  font-size: 14;
+}
