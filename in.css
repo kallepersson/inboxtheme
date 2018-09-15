@@ -1,13 +1,70 @@
-/* Compose button */
-.aeN .z0> {
-  height: auto;
+/**
+  General hiding of elements
+**/
+.aeN .z0 > .L3::before /* Compose Icon */ ,
+.aeG /* Footer stats */ ,
+.gb_Be img.gb_Wa /* Gmail logo */,
+.gb_Ra .gb_Sa /* GSuite Logo */
+{
+  display: none !important;
 }
-.aeN .z0>.L3 {
+
+
+
+/**
+  Toolbar / Header
+**/
+
+/* Toolbar background */
+header { background-color: #898984 !important; }
+body[data-hash="#inbox"] header { background-color: #4285f4 !important; }
+body[data-hash="#snoozed"] header { background-color: #ef6c00 !important; }
+body[data-hash="#all"] header { background-color: #0f9d58 !important; }
+
+/* Toolbar icons */
+header svg {
+  color: #fff !important;
+}
+
+/* Toolbar input field */
+header input {
+  filter: invert(100%);
+}
+
+/* GSuite button, invert back */
+.gb_Ra {
+  border: 0 !important;
+  width: auto !important;
+  /*filter: invert(100%);*/
+  background-color: transparent !important;
+} 
+
+/**
+  Sidebar
+**/
+
+.aim {
+
+}
+
+.aim .TN {
+  height: 40px;
+}
+
+.TO .nU > .n0 {
+  font-size: 14px;
+}
+
+/* Compose button */
+.aeN .z0 {
+  height: auto;
+  margin: 0;
+}
+.aeN .z0 > .L3 {
   background-color: #d23f31;
   height: 56px;
   width: 56px;
   border-radius:50%;
-  position: relative;
   box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
   position: fixed;
   right: 15px;
@@ -16,20 +73,6 @@
   text-indent: -9999px;
   overflow: hidden;
   padding: 0;
-}
-
-.aeN .z0>.L3::before /* Compose Icon */ ,
-.aeG /* Footer stats */ ,
-.gb_Be img.gb_Wa /* Gmail logo */,
-.gb_Ra .gb_Sa /* GSuite Logo */
-{
-  display: none !important;
-}
-
-/* GSuite button */
-.gb_Ra {
-  border: 0 !important;
-  width: auto !important;
 }
 
 /* Debug element */
