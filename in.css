@@ -1,6 +1,7 @@
 /**
  * General hiding of elements
  **/
+._in .bru, /* Delete button */
 ._in .Wm, /* Message list count */
 ._in .aeN .z0 > .L3::before, /* Compose Icon */ 
 ._in .aeG, /* Footer stats */ 
@@ -148,6 +149,10 @@ body._in,
   background-image: url("https://www.gstatic.com/images/icons/material/system/1x/inbox_black_20dp.png") !important;
 }
 
+._in .nZ .afM {
+  background-image: url('https://www.gstatic.com/images/icons/material/system/1x/arrow_drop_down_black_20dp.png') !important;
+}
+
 ._in .byl .TO.nZ > .aHS-bnt .n0, .nZ>.aHS-bnt .bsU {
   color: #000 !important;
 }
@@ -167,14 +172,21 @@ body._in,
   margin-bottom: 20px;
 }
 
+
 /* Section collapse chevron */
 ._in h3.Wr > img {
   display: none;
 }
 
+/* Section wrapper */
+._in h3.Wr {
+  margin-left: 0;
+}
+
 /* Section title */
 ._in h3.Wr > .Wn {
-  font-size: 14px;
+  font-size: 13px;
+  -webkit-font-smoothing: auto;
   line-height: 24px;
   letter-spacing: normal;
   font-weight: normal;
@@ -201,10 +213,26 @@ body._in,
   opacity: 1;
  }
 
+/* Section row list table */
+._in .aDM table {
+  box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0,0,0,.12), 0 2px 4px rgba(0,0,0,.24);
+}
+
  /* Message row */
 ._in .zE,
 ._in .yO {
   background: #fff !important;
+}
+
+/* Message row */
+._in .zA {
+  padding-top: 12px;
+  padding-bottom: 13px;
+}
+
+/* Archive button */
+._in .brq {
+  background-image: url("//ssl.gstatic.com/bt/C3341AA7A1A076756462EE2E5CD71C11/1x/btw_ic_done_black_24dp.png");
 }
 
 /**
