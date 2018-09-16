@@ -1,7 +1,7 @@
 /**
  * General hiding of elements
  **/
-._in .Di>.amH, /* Message list count */
+._in .Wm, /* Message list count */
 ._in .aeN .z0 > .L3::before, /* Compose Icon */ 
 ._in .aeG, /* Footer stats */ 
 ._in .gb_Be img.gb_Wa, /* Gmail logo */
@@ -61,11 +61,11 @@ body._in,
 
 /* Toolbar title */
 
-._intitle {
+._inTitle {
   display: none;
 }
 
-._in ._intitle {
+._in ._inTitle {
   display: block;
 }
 
@@ -179,6 +179,26 @@ body._in,
   letter-spacing: normal;
   font-weight: normal;
   color: #616161;
+ }
+
+ /* Custom Sweep Button */
+ ._inSweep {
+  background: transparent url("//www.gstatic.com/images/icons/material/system/1x/sweep_black_24dp.png") !important;
+  width: 24px;
+  height: 24px;
+  opacity: 0.6;
+  border: 0;
+  box-sizing: border-box;
+  display: none;
+  outline: 0;
+ }
+
+ ._in ._inSweep {
+  display: inline-block;
+ }
+
+ ._inSweep:hover {
+  opacity: 1;
  }
 
  /* Message row */

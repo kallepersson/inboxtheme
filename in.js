@@ -4,6 +4,7 @@ _styleElement.innerText = _css;
 const init = (evt) => {
   document.head.appendChild(_styleElement);
   updateTitle();
+  toggleTheme();
 }
 
 const toggleTheme = () => {
@@ -30,14 +31,47 @@ const handleHashChange = (evt) => {
   if (!titleElement || !linkElement) {
     return;
   }
-  let titleSpan = titleElement.querySelector("._intitle")
+  let titleSpan = titleElement.querySelector("._inTitle")
   if (!titleSpan) {
     titleSpan = document.createElement("span");
-    titleSpan.classList.add("_intitle");
+    titleSpan.classList.add("_inTitle");
     titleElement.appendChild(titleSpan);
   }
   titleSpan.innerText = linkElement.innerText;
   titleElement.href = linkElement.href;
+  setupSweepButtons();
+}
+
+const setupSweepButtons = () => {
+  let sections = document.querySelectorAll(".ae4");
+  sections.forEach((section) => {
+    let sweepButton = section.querySelector("._inSweep");
+    let buttonContainer = section.querySelector(".Cr");
+    if (!sweepButton) {
+      sweepButton = document.createElement("button");
+      sweepButton.classList.add("_inSweep");
+      sweepButton.addEventListener("click", handleSweepButtonClick);
+      buttonContainer.insertBefore(sweepButton, buttonContainer.firstChild);
+    }
+  })
+}
+
+/**
+
+*/
+const getMessageRowIsStarred = (elm) => {
+  const starredButton = elm.querySelector(".T-KT");
+  return starredButton && starredButton.classList.contains("T-KT-Jp");
+}
+
+/**
+
+*/
+const archiveMessageRow = (elm) => {
+  const archiveButton = elm.querySelector(".brq");
+  if (archiveButton) {
+    archiveButton.click();
+  }
 }
 
 document.addEventListener("dblclick", (evt) => {
@@ -47,7 +81,27 @@ document.addEventListener("dblclick", (evt) => {
   }
 });
 
+const handleSweepButtonClick = (evt) => {
+  let section = queryParentSelector(evt.target, ".aDM");
+  section.querySelectorAll("tr").forEach((elm) => {
+    if (!getMessageRowIsStarred(elm)) {
+      archiveMessageRow(elm);
+    }
+  })
+}
+
 window.addEventListener("hashchange", handleHashChange);
+
+const queryParentSelector = (elm, sel) => {
+  var parent = elm.parentElement;
+  while (!parent.matches(sel)) {
+    parent = parent.parentElement;
+    if (!parent) {
+      return null;
+    }
+  }
+  return parent
+}
 
 if (document.head) {
   init();
