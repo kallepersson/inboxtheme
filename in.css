@@ -13,8 +13,10 @@
  * Body and base
  **/
 
-body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+body,
+.n0,
+.Wn {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
 
 body,
@@ -122,7 +124,6 @@ header input {
 /* Menu item link */
 .TO .nU > .n0 {
   font-size: 14px;
-  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
   font-weight: normal;
 }
 
@@ -139,14 +140,39 @@ header input {
 }
 
 /**
+ * Center section
+ **/
+
+ .AO .aeF {
+  width: 87%;
+  margin: 0 auto;
+ }
+
+/* Section title */
+
+h3.Wr > img {
+  display: none;
+}
+
+h3.Wr > .Wn {
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: normal;
+  font-weight: normal;
+  color: #616161;
+ }
+
+/**
  * Other elements 
  **/
 
-/* Compose button */
+/* Compose button wrapper */
 .aeN .z0 {
   height: auto;
   margin: 0;
 }
+
+/* Compose button */
 .aeN .z0 > .L3 {
   background-color: #d23f31;
   height: 56px;

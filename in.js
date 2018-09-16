@@ -23,7 +23,6 @@ const handleHashChange = (evt) => {
   document.body.dataset.hash = hash;
   let linkElement = document.querySelector(`.aim a[href$="${hash}"]`);
   let titleElement = document.querySelector("a.gb_De");
-  console.log("handleHashChange", hash, linkElement, titleElement);
   if (!titleElement || !linkElement) {
     return;
   }
