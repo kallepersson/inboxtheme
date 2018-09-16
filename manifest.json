@@ -3,14 +3,15 @@
   "description" : "Brings the Goole Inbox experience to Gmail",
   "homepage_url": "http://flowapps.co/inboxtheme",
   "author": "Kalle Persson",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "icons": {
     "16": "img/icon-256.png",
     "19": "img/icon-256.png",
     "38": "img/icon-256.png",
     "48": "img/icon-256.png",
     "128": "img/icon-256.png",
-    "256": "img/icon-256.png"
+    "256": "img/icon-256.png",
+    "512": "img/icon-512.png"
   },
   "manifest_version": 2,
   "content_scripts": [
