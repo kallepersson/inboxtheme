@@ -1,6 +1,6 @@
 /**
-  General hiding of elements
-**/
+ * General hiding of elements
+ **/
 .aeN .z0 > .L3::before /* Compose Icon */ ,
 .aeG /* Footer stats */ ,
 .gb_Be img.gb_Wa /* Gmail logo */,
@@ -9,11 +9,28 @@
   display: none !important;
 }
 
+/**
+ * Body and base
+ **/
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body,
+.no {
+  background: #f2f2f2;
+}
+
+.aeJ /* Middle section */,
+.brC-aT5-aOt-Jw /* Right Sidebar */{
+  background: transparent !important;
+}
 
 
 /**
-  Toolbar / Header
-**/
+ * Toolbar / Header
+ **/
 
 /* Toolbar background */
 header { background-color: #898984 !important; }
@@ -21,9 +38,29 @@ body[data-hash="#inbox"] header { background-color: #4285f4 !important; }
 body[data-hash="#snoozed"] header { background-color: #ef6c00 !important; }
 body[data-hash="#all"] header { background-color: #0f9d58 !important; }
 
+/* Toolbar shadow */
+header:before {
+    box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+    content: "";
+    height: 64px;
+    left: -2%;
+    position: fixed;
+    width: 104%;
+}
+
 /* Toolbar icons */
 header svg {
   color: #fff !important;
+  opacity: 1 !important;
+}
+
+/* Toolbar title */
+.gb_Ta a.gb_De {
+  margin-top: -4px;
+  -webkit-font-smoothing: antialiased;
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
 }
 
 /* Toolbar input field */
@@ -35,25 +72,75 @@ header input {
 .gb_Ra {
   border: 0 !important;
   width: auto !important;
-  /*filter: invert(100%);*/
   background-color: transparent !important;
 } 
 
 /**
-  Sidebar
-**/
+ * Sidebar
+ **/
 
 .aim {
-
+  padding-left: 8px !important;
 }
 
+/* Menu item row */
+.TK .TO {
+  border-radius: 5px !important;
+}
+
+/* Menu item row active */
+.TK .TO:active,
+.n6 .ah9.aiu:active
+.CL:active,
+.TO.nZ,
+.TO.NQ,
+.TO.ol {
+  background-color: rgba(0,0,0,.05) !important; 
+}
+
+/* Left sidebar collapsed */
+.aeN.bhZ {
+  display: none !important;
+}
+
+/* Menu container */
+.wT {
+  padding-top: 4px;
+}
+
+/* Menu item sections */
+.TK {
+    border-bottom: 1px solid #ddd;
+    padding: 8px 0;
+}
+
+/* Menu item row inner */
 .aim .TN {
   height: 40px;
 }
 
+/* Menu item link */
 .TO .nU > .n0 {
   font-size: 14px;
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-weight: normal;
 }
+
+/* Resetting Inbox menu item custom styling */
+.wT > .n3 .byl:first-child .aim:first-child .nZ {
+  background-color: rgba(0,0,0,.05) !important; 
+}
+.nZ > .aHS-bnt .qj {
+  background-image: url("https://www.gstatic.com/images/icons/material/system/1x/inbox_black_20dp.png") !important;
+}
+
+.byl .TO.nZ > .aHS-bnt .n0, .nZ>.aHS-bnt .bsU {
+  color: #000 !important;
+}
+
+/**
+ * Other elements 
+ **/
 
 /* Compose button */
 .aeN .z0 {
