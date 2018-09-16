@@ -47,7 +47,7 @@ const setupSweepButtons = () => {
   sections.forEach((section) => {
     let sweepButton = section.querySelector("._inSweep");
     let buttonContainer = section.querySelector(".Cr");
-    if (!sweepButton) {
+    if (buttonContainer && !sweepButton) {
       sweepButton = document.createElement("button");
       sweepButton.classList.add("_inSweep");
       sweepButton.addEventListener("click", handleSweepButtonClick);
