@@ -3,8 +3,11 @@ _styleElement.innerText = _css;
 
 const init = (evt) => {
   document.head.appendChild(_styleElement);
-  document.body.classList.add("_in");
   updateTitle();
+}
+
+const toggleTheme = () => {
+  document.body.classList.toggle("_in");
 }
 
 const updateTitle = () => {
@@ -27,9 +30,22 @@ const handleHashChange = (evt) => {
   if (!titleElement || !linkElement) {
     return;
   }
-  titleElement.innerText = linkElement.innerText;
+  let titleSpan = titleElement.querySelector("._intitle")
+  if (!titleSpan) {
+    titleSpan = document.createElement("span");
+    titleSpan.classList.add("_intitle");
+    titleElement.appendChild(titleSpan);
+  }
+  titleSpan.innerText = linkElement.innerText;
   titleElement.href = linkElement.href;
 }
+
+document.addEventListener("dblclick", (evt) => {
+  // temp toggling for now
+  if (evt.target.classList.contains("gb_Ed")) {
+    toggleTheme();
+  }
+});
 
 window.addEventListener("hashchange", handleHashChange);
 

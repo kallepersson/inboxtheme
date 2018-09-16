@@ -16,7 +16,8 @@
 
 body._in,
 ._in .n0,
-._in .Wn {
+._in .Wn,
+._in .zA > .a4W {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
 
@@ -59,8 +60,18 @@ body._in,
 }
 
 /* Toolbar title */
+
+._intitle {
+  display: none;
+}
+
+._in ._intitle {
+  display: block;
+}
+
 ._in .gb_Ta a.gb_De {
   margin-top: -4px;
+  display: block;
   -webkit-font-smoothing: antialiased;
   color: #fff;
   text-decoration: none;
@@ -152,7 +163,7 @@ body._in,
  }
 
 /* Section */
-.aDM {
+._in .aDM {
   margin-bottom: 20px;
 }
 
@@ -171,7 +182,8 @@ body._in,
  }
 
  /* Message row */
-.zE, .y0 {
+._in .zE,
+._in .yO {
   background: #fff !important;
 }
 
@@ -187,7 +199,7 @@ body._in,
 
 /* Compose button */
 ._in .aeN .z0 > .L3 {
-  background-color: #d23f31;
+  background: #d23f31 url("//ssl.gstatic.com/bt/C3341AA7A1A076756462EE2E5CD71C11/1x/btw_ic_speeddial_white_24dp.png") no-repeat center center;
   height: 56px;
   width: 56px;
   border-radius:50%;
@@ -199,6 +211,9 @@ body._in,
   text-indent: -9999px;
   overflow: hidden;
   padding: 0;
+}
+._in .aeN .z0 > .L3:hover {
+  background: #d23f31 url("//ssl.gstatic.com/bt/C3341AA7A1A076756462EE2E5CD71C11/1x/btw_ic_speeddial_compose_white_24dp.png") no-repeat center center;
 }
 
 /* Debug element */
