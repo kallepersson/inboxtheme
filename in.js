@@ -74,6 +74,13 @@ const archiveMessageRow = (elm) => {
   }
 }
 
+document.addEventListener("dblclick", (evt) => {
+  // temp toggling for now
+  if (evt.target.classList.contains("gb_Ed")) {
+    toggleTheme();
+  }
+});
+
 const handleSweepButtonClick = (evt) => {
   let section = queryParentSelector(evt.target, ".aDM");
   section.querySelectorAll("tr").forEach((elm) => {
