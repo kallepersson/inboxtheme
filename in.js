@@ -3,6 +3,7 @@ _styleElement.innerText = _css;
 
 const init = (evt) => {
   document.head.appendChild(_styleElement);
+  document.body.classList.add("_in");
   updateTitle();
 }
 

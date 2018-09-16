@@ -1,10 +1,11 @@
 /**
  * General hiding of elements
  **/
-.aeN .z0 > .L3::before /* Compose Icon */ ,
-.aeG /* Footer stats */ ,
-.gb_Be img.gb_Wa /* Gmail logo */,
-.gb_Ra .gb_Sa /* GSuite Logo */
+._in .Di>.amH, /* Message list count */
+._in .aeN .z0 > .L3::before, /* Compose Icon */ 
+._in .aeG, /* Footer stats */ 
+._in .gb_Be img.gb_Wa, /* Gmail logo */
+._in .gb_Ra .gb_Sa /* GSuite Logo */
 {
   display: none !important;
 }
@@ -13,19 +14,19 @@
  * Body and base
  **/
 
-body,
-.n0,
-.Wn {
+body._in,
+._in .n0,
+._in .Wn {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
 
-body,
-.no {
+body._in,
+._in .no {
   background: #f2f2f2;
 }
 
-.aeJ /* Middle section */,
-.brC-aT5-aOt-Jw /* Right Sidebar */{
+._in .aeJ /* Middle section */,
+._in .brC-aT5-aOt-Jw /* Right Sidebar */{
   background: transparent !important;
 }
 
@@ -35,13 +36,14 @@ body,
  **/
 
 /* Toolbar background */
-header { background-color: #898984 !important; }
-body[data-hash="#inbox"] header { background-color: #4285f4 !important; }
-body[data-hash="#snoozed"] header { background-color: #ef6c00 !important; }
-body[data-hash="#all"] header { background-color: #0f9d58 !important; }
+._in header { background-color: #898984 !important; }
+._in[data-hash="#inbox"] header { background-color: #4285f4 !important; }
+._in[data-hash="#starred"] header { background-color: #FDB500 !important; }
+._in[data-hash="#snoozed"] header { background-color: #ef6c00 !important; }
+._in[data-hash="#all"] header { background-color: #0f9d58 !important; }
 
 /* Toolbar shadow */
-header:before {
+._in header:before {
     box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
     content: "";
     height: 64px;
@@ -51,13 +53,13 @@ header:before {
 }
 
 /* Toolbar icons */
-header svg {
+._in header svg {
   color: #fff !important;
   opacity: 1 !important;
 }
 
 /* Toolbar title */
-.gb_Ta a.gb_De {
+._in .gb_Ta a.gb_De {
   margin-top: -4px;
   -webkit-font-smoothing: antialiased;
   color: #fff;
@@ -66,12 +68,12 @@ header svg {
 }
 
 /* Toolbar input field */
-header input {
+._in header input {
   filter: invert(100%);
 }
 
 /* GSuite button, invert back */
-.gb_Ra {
+._in .gb_Ra {
   border: 0 !important;
   width: auto !important;
   background-color: transparent !important;
@@ -81,80 +83,86 @@ header input {
  * Sidebar
  **/
 
-.aim {
-  padding-left: 8px !important;
+._in .aim {
+  padding-left: 4px !important;
 }
 
 /* Menu item row */
-.TK .TO {
+._in .TK .TO {
   border-radius: 5px !important;
 }
 
 /* Menu item row active */
-.TK .TO:active,
-.n6 .ah9.aiu:active
-.CL:active,
-.TO.nZ,
-.TO.NQ,
-.TO.ol {
+._in .TK .TO:active,
+._in .n6 .ah9.aiu:active
+._in .CL:active,
+._in .TO.nZ,
+._in .TO.NQ,
+._in .TO.ol {
   background-color: rgba(0,0,0,.05) !important; 
 }
 
 /* Left sidebar collapsed */
-.aeN.bhZ {
+._in .aeN.bhZ {
   display: none !important;
 }
 
 /* Menu container */
-.wT {
+._in .wT {
   padding-top: 4px;
 }
 
 /* Menu item sections */
-.TK {
+._in .TK {
     border-bottom: 1px solid #ddd;
     padding: 8px 0;
 }
 
 /* Menu item row inner */
-.aim .TN {
+._in .aim .TN {
   height: 40px;
 }
 
 /* Menu item link */
-.TO .nU > .n0 {
+._in .TO .nU > .n0 {
   font-size: 14px;
   font-weight: normal;
 }
 
 /* Resetting Inbox menu item custom styling */
-.wT > .n3 .byl:first-child .aim:first-child .nZ {
+._in .wT > .n3 .byl:first-child .aim:first-child .nZ {
   background-color: rgba(0,0,0,.05) !important; 
 }
-.nZ > .aHS-bnt .qj {
+._in .nZ > .aHS-bnt .qj {
   background-image: url("https://www.gstatic.com/images/icons/material/system/1x/inbox_black_20dp.png") !important;
 }
 
-.byl .TO.nZ > .aHS-bnt .n0, .nZ>.aHS-bnt .bsU {
+._in .byl .TO.nZ > .aHS-bnt .n0, .nZ>.aHS-bnt .bsU {
   color: #000 !important;
 }
 
 /**
- * Center section
+ * Center message list section
  **/
 
- .AO .aeF {
+/* Message list wrapper [TODO responsive]*/
+._in .AO .aeF {
   width: 87%;
   margin: 0 auto;
  }
 
-/* Section title */
+/* Section */
+.aDM {
+  margin-bottom: 20px;
+}
 
-h3.Wr > img {
+/* Section collapse chevron */
+._in h3.Wr > img {
   display: none;
 }
 
-h3.Wr > .Wn {
+/* Section title */
+._in h3.Wr > .Wn {
   font-size: 14px;
   line-height: 24px;
   letter-spacing: normal;
@@ -162,18 +170,23 @@ h3.Wr > .Wn {
   color: #616161;
  }
 
+ /* Message row */
+.zE, .y0 {
+  background: #fff !important;
+}
+
 /**
  * Other elements 
  **/
 
 /* Compose button wrapper */
-.aeN .z0 {
+._in .aeN .z0 {
   height: auto;
   margin: 0;
 }
 
 /* Compose button */
-.aeN .z0 > .L3 {
+._in .aeN .z0 > .L3 {
   background-color: #d23f31;
   height: 56px;
   width: 56px;
@@ -189,7 +202,7 @@ h3.Wr > .Wn {
 }
 
 /* Debug element */
-body::after {
+._in::after {
   display: block;
   position: fixed;
   bottom: 25px;
