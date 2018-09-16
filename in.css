@@ -60,6 +60,10 @@ body._in,
   opacity: 1 !important;
 }
 
+._in header .gb_af svg {
+  color: #000 !important;
+}
+
 /* Toolbar title */
 
 ._inTitle {
@@ -83,6 +87,11 @@ body._in,
 ._in header input {
   filter: invert(100%);
 }
+
+._in header .gb_af input {
+  filter: invert(0);
+}
+
 
 /* GSuite button, invert back */
 ._in .gb_Ra {
@@ -186,7 +195,7 @@ body._in,
 
 /* Section */
 ._in .aDM {
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 }
 
 
