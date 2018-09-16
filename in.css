@@ -289,7 +289,6 @@ body._in,
 
 /* Debug element */
 ._in::after {
-  display: block;
   position: fixed;
   bottom: 25px;
   left: 0;
