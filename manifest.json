@@ -1,9 +1,9 @@
 {
   "name": "Inbox Theme for Gmail",
-  "description" : "Brings the Goole Inbox experience to Gmail",
+  "description" : "Brings the Google Inbox experience to Gmail",
   "homepage_url": "http://flowapps.co/inboxtheme",
   "author": "Kalle Persson",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "icons": {
     "16": "img/icon-256.png",
     "19": "img/icon-256.png",
