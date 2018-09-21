@@ -52,6 +52,7 @@ body._in,
     left: -2%;
     position: fixed;
     width: 104%;
+    pointer-events: none;
 }
 
 /* Toolbar icons */

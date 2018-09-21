@@ -93,6 +93,9 @@ const handleSweepButtonClick = (evt) => {
 window.addEventListener("hashchange", handleHashChange);
 
 const queryParentSelector = (elm, sel) => {
+  if (!elm) {
+    return null;
+  }
   var parent = elm.parentElement;
   while (!parent.matches(sel)) {
     parent = parent.parentElement;
