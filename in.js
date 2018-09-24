@@ -103,7 +103,7 @@ const queryParentSelector = (elm, sel) => {
       return null;
     }
   }
-  return parent
+  return parent;
 }
 
 if (document.head) {

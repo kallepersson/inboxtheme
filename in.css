@@ -89,6 +89,10 @@ body._in,
   filter: invert(100%);
 }
 
+._in header form {
+  margin: 0 auto !important;
+}
+
 ._in header .gb_af input {
   filter: invert(0);
 }
