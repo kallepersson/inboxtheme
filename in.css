@@ -159,16 +159,79 @@ body._in,
 ._in .wT > .n3 .byl:first-child .aim:first-child .nZ {
   background-color: rgba(0,0,0,.05) !important; 
 }
-._in .nZ > .aHS-bnt .qj {
-  background-image: url("https://www.gstatic.com/images/icons/material/system/1x/inbox_black_20dp.png") !important;
+.qj {
+  width: 24px !important;
+  height: 24px !important;
+  opacity: 1 !important;
+  margin-right: 24px !important;
 }
-
-._in .nZ .afM {
-  background-image: url('https://www.gstatic.com/images/icons/material/system/1x/arrow_drop_down_black_20dp.png') !important;
+.qj::before {
+  content: none !important;
 }
-
-._in .byl .TO.nZ > .aHS-bnt .n0, .nZ>.aHS-bnt .bsU {
-  color: #000 !important;
+.qj::after {
+  content: none !important;
+}
+/* Inbox */
+._in .aHS-bnt .qj {
+  background-image: url("//www.gstatic.com/images/icons/material/system/2x/inbox_googblue_24dp.png") !important;
+  background-size: 24px !important;
+}
+/* Dropdown arrow */
+._in .aHS-bnt .afM {
+  background-image: url('//www.gstatic.com/images/icons/material/system/2x/arrow_drop_down_black_20dp.png') !important;
+}
+/* Starred */
+._in .aHS-bnw {
+  display: none;
+}
+/* Snoozed */
+._in .aHS-bu1 .qj {
+  background-image: url("//ssl.gstatic.com/bt/C3341AA7A1A076756462EE2E5CD71C11/2x/ic_upcoming_clr_24dp_r5_2x.png") !important;
+  background-size: 24px !important;
+}
+/* Important */
+._in .aHS-bns {
+  display: none;
+}
+/* Chats */
+._in .aHS-aHP {
+  display: none;
+}
+/* Sent */
+._in .aHS-bnu .qj {
+  background-image: url("//ssl.gstatic.com/bt/C3341AA7A1A076756462EE2E5CD71C11/2x/ic_sent_right_g60_24dp_r1_2x.png") !important;
+  background-size: 24px !important;
+}
+/* Drafts */
+._in .aHS-bnq .qj {
+  background-image: url("//ssl.gstatic.com/bt/C3341AA7A1A076756462EE2E5CD71C11/2x/ic_draft_g60_24dp_r2_2x.png") !important;
+  background-size: 24px !important;
+}
+/* Trash */
+._in .aHS-bnx .qj {
+  background-image: url("//ssl.gstatic.com/bt/C3341AA7A1A076756462EE2E5CD71C11/2x/ic_trash_g60_24dp_r2_2x.png") !important;
+  background-size: 24px !important;
+}
+/* Category */
+._in .aHS-bnr .qj {
+  background-image: url("//ssl.gstatic.com/bt/C3341AA7A1A076756462EE2E5CD71C11/2x/ic_custom-cluster_24px_g60_r3_2x.png") !important;
+  background-size: 24px !important;
+}
+/* Done */
+._in .aHS-aHO .qj {
+  background-image: url("//ssl.gstatic.com/bt/C3341AA7A1A076756462EE2E5CD71C11/2x/ic_done_clr_24dp_r4_2x.png") !important;
+  background-size: 24px !important;
+}
+/* Spam */
+._in .aHS-bnv .qj {
+  background-image: url("//ssl.gstatic.com/bt/C3341AA7A1A076756462EE2E5CD71C11/2x/ic_spam_g60_24dp_r2_2x.png") !important;
+  background-size: 24px !important;
+}
+.TO.nZ .n0 {
+  color: #212121 !important;
+}
+.TO .n0 {
+  color: #616161 !important;
 }
 
 /**
