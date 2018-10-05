@@ -115,7 +115,7 @@ body._in,
 
 /* Menu item row */
 ._in .TK .TO {
-  border-radius: 5px !important;
+  border-radius: 2px !important;
 }
 
 /* Menu item row active */
@@ -134,8 +134,17 @@ body._in,
 }
 
 /* Menu container */
+._in .aeN {
+  width: 232px !important;
+  max-width: unset !important;
+  min-width: unset !important;
+}
 ._in .wT {
   padding-top: 4px;
+  max-width: unset;
+  min-width: unset;
+  width: 224px;
+  padding: 12px 8px 52px;
 }
 
 /* Menu item sections */
