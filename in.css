@@ -138,6 +138,9 @@ body._in,
   width: 232px !important;
   max-width: unset !important;
   min-width: unset !important;
+  position: absolute !important;
+  left: 0;
+  z-index: 999;
 }
 ._in .wT {
   padding-top: 4px;
@@ -246,6 +249,12 @@ body._in,
 /**
  * Center message list section
  **/
+
+/* Message list header */
+._in .aeH {
+  width: 1200px;
+  margin: 0 auto;
+}
 
 /* Message list wrapper */
 ._in .AO .aeF {
