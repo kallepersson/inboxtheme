@@ -334,6 +334,9 @@ body._in,
 ._in .brq {
   background-image: url("//ssl.gstatic.com/bt/C3341AA7A1A076756462EE2E5CD71C11/1x/btw_ic_done_black_24dp.png");
 }
+.pW {
+  opacity: 1 !important;
+}
 
 /**
  * Other elements 
