@@ -3,7 +3,7 @@
   "description" : "Brings the Google Inbox experience to Gmail",
   "homepage_url": "http://flowapps.co/inboxtheme",
   "author": "Kalle Persson",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "icons": {
     "16": "img/icon-256.png",
     "19": "img/icon-256.png",
