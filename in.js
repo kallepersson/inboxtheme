@@ -5,7 +5,44 @@ const init = (evt) => {
   document.head.appendChild(_styleElement);
   updateTitle();
   toggleTheme();
+  reorderMenuItems();
 }
+
+const reorderMenuItems = () => {
+  const observer = new MutationObserver(() => {
+    const parent = document.querySelector('.wT .byl');
+    const refer = document.querySelector('.wT .byl>.TK');
+    const inbox = queryParentSelector(document.querySelector('.aHS-bnt'), '.aim');
+    const snoozed = queryParentSelector(document.querySelector('.aHS-bu1'), '.aim');
+    const done = queryParentSelector(document.querySelector('.aHS-aHO'), '.aim');
+    const drafts = queryParentSelector(document.querySelector('.aHS-bnq'), '.aim');
+    const sent = queryParentSelector(document.querySelector('.aHS-bnu'), '.aim');
+    const spam = queryParentSelector(document.querySelector('.aHS-bnv'), '.aim');
+    const trash = queryParentSelector(document.querySelector('.aHS-bnx'), '.aim');
+    if (parent && refer && inbox && snoozed && done) {
+      /* Gmail will execute its script to add element to the first child, so
+       * add one placeholder for it and do the rest in the next child.
+       */
+      const placeholder = document.createElement('div');
+      placeholder.classList.add('TK');
+      placeholder.style.cssText = 'padding: 0; border: 0;';
+
+      const newNode = document.createElement('div');
+      newNode.classList.add('TK');
+      newNode.appendChild(inbox);
+      newNode.appendChild(snoozed);
+      newNode.appendChild(done);
+      parent.insertBefore(placeholder, refer);
+      parent.insertBefore(newNode, refer);
+      refer.appendChild(drafts);
+      refer.appendChild(sent);
+      refer.appendChild(trash);
+      refer.appendChild(spam);
+      observer.disconnect();
+    }
+  });
+  observer.observe(document.body, {subtree:true, childList:true});
+};
 
 const toggleTheme = () => {
   document.body.classList.toggle("_in");
