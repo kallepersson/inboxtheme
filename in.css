@@ -234,22 +234,16 @@ body._in,
 ._in .aHS-bnt .afM {
   background-image: url('//www.gstatic.com/images/icons/material/system/2x/arrow_drop_down_black_20dp.png') !important;
 }
-/* Starred */
-._in .aHS-bnw {
-  display: none;
+/* Starred, Important, Chats */
+._in .aHS-bnw .qr,
+._in .aHS-bns .qr,
+._in .aHS-aHP .qr {
+  opacity: 0.6 !important;
 }
 /* Snoozed */
 ._in .aHS-bu1 .qj {
   background-image: url("//ssl.gstatic.com/bt/C3341AA7A1A076756462EE2E5CD71C11/2x/ic_upcoming_clr_24dp_r5_2x.png") !important;
   background-size: 24px !important;
-}
-/* Important */
-._in .aHS-bns {
-  display: none;
-}
-/* Chats */
-._in .aHS-aHP {
-  display: none;
 }
 /* Sent */
 ._in .aHS-bnu .qj {
