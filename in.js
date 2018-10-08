@@ -27,6 +27,11 @@ const reorderMenuItems = () => {
       placeholder.classList.add('TK');
       placeholder.style.cssText = 'padding: 0; border: 0;';
 
+      // Manually add on-click event to done elment
+      done.addEventListener("click", evt => {
+        window.location = evt.target.querySelector("a").href;
+      });
+
       const newNode = document.createElement('div');
       newNode.classList.add('TK');
       newNode.appendChild(inbox);
