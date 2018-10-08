@@ -249,33 +249,28 @@ body._in,
 /**
  * Center message list section
  **/
-
-/* Message list header */
-._in .aeH {
-  width: 1200px;
+._in .bkK {
+  width: 1200px !important;
   margin: 0 auto;
 }
 
-/* Message list wrapper */
-._in .AO .aeF {
-  width: 1200px;
-  margin: 0 auto;
- }
+@media (max-width: 1800px) {
+  ._in .bkK {
+    width: 66.66%;
+  }
+}
 
 @media (max-width: 1632px) {
-  ._in .AO .aeF {
-    width: auto;
+  ._in .bkK {
     min-width: 512px;
-    margin: 0 100px 0 40px;
+    margin-left: 272px;
+    margin-right: 55px;
   }
 }
 
 @media (max-width: 920px) {
   ._in .bhZ+.bkK {
     margin-left: 0;
-  }
-  ._in .AO .aeF {
-    margin: 0 40px;
   }
 }
 
