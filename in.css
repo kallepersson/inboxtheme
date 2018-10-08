@@ -175,7 +175,6 @@ body._in,
   width: 232px !important;
   max-width: unset !important;
   min-width: unset !important;
-  position: absolute !important;
   left: 0;
   z-index: 999;
 }
@@ -286,9 +285,20 @@ body._in,
 /**
  * Center message list section
  **/
+.bkL .no {
+  position: relative !important;
+}
+._in .aeN {
+  position: absolute !important;
+}
 ._in .bkK {
   width: 1200px !important;
   margin: 0 auto;
+}
+._in .bAw {
+  position: absolute !important;
+  right: 0 !important;
+  top: 0 !important;
 }
 
 @media (max-width: 1800px) {
