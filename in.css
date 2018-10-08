@@ -291,6 +291,9 @@ body._in,
 ._in .aeN {
   position: absolute !important;
 }
+._in .bhZ+.bkK {
+  margin-left: auto !important;
+}
 ._in .bkK {
   width: 1200px !important;
   margin: 0 auto;
@@ -312,12 +315,6 @@ body._in,
     min-width: 512px;
     margin-left: 272px;
     margin-right: 55px;
-  }
-}
-
-@media (max-width: 920px) {
-  ._in .bhZ+.bkK {
-    margin-left: 0;
   }
 }
 
