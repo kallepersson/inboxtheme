@@ -8,18 +8,37 @@ const init = (evt) => {
   reorderMenuItems();
 }
 
+const menuItems = [
+  { label: 'inbox',     className: '.aHS-bnt' },
+  { label: 'snoozed',   className: '.aHS-bu1' },
+  { label: 'done',      className: '.aHS-aHO' },
+  { label: 'drafts',    className: '.aHS-bnq' },
+  { label: 'sent',      className: '.aHS-bnu' },
+  { label: 'spam',      className: '.aHS-bnv' },
+  { label: 'trash',     className: '.aHS-bnx' },
+  { label: 'starred',   className: '.aHS-bnw' },
+  { label: 'important', className: '.aHS-bns' },
+  { label: 'chats',     className: '.aHS-aHP' },
+];
+
 const reorderMenuItems = () => {
   const observer = new MutationObserver(() => {
     const parent = document.querySelector('.wT .byl');
     const refer = document.querySelector('.wT .byl>.TK');
-    const inbox = queryParentSelector(document.querySelector('.aHS-bnt'), '.aim');
-    const snoozed = queryParentSelector(document.querySelector('.aHS-bu1'), '.aim');
-    const done = queryParentSelector(document.querySelector('.aHS-aHO'), '.aim');
-    const drafts = queryParentSelector(document.querySelector('.aHS-bnq'), '.aim');
-    const sent = queryParentSelector(document.querySelector('.aHS-bnu'), '.aim');
-    const spam = queryParentSelector(document.querySelector('.aHS-bnv'), '.aim');
-    const trash = queryParentSelector(document.querySelector('.aHS-bnx'), '.aim');
-    if (parent && refer && inbox && snoozed && done) {
+
+    const menuItemNodes = menuItems.map(({ className }) =>
+      queryParentSelector(document.querySelector(className), '.aim')
+    );
+    const [
+      inbox, snoozed, done, drafts, sent,
+      spam, trash, starred, important, chats
+    ] = menuItemNodes;
+
+    if (
+      parent && refer &&
+      inbox && snoozed && done && drafts && sent &&
+      spam && trash && starred && important && chats
+    ) {
       /* Gmail will execute its script to add element to the first child, so
        * add one placeholder for it and do the rest in the next child.
        */
