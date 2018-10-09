@@ -3,9 +3,9 @@ _styleElement.innerText = _css;
 
 const init = (evt) => {
   document.head.appendChild(_styleElement);
+  reorderMenuItems();
   updateTitle();
   toggleTheme();
-  reorderMenuItems();
 }
 
 const menuItems = [
@@ -46,10 +46,14 @@ const reorderMenuItems = () => {
       placeholder.classList.add('TK');
       placeholder.style.cssText = 'padding: 0; border: 0;';
 
+      // Assign link href which only show archived mail
+      done.querySelector('a').href = 'https://mail.google.com/mail/u/0/#search/-is%3Ainbox';
+
+      // Remove id attribute from done element for preventing event override from Gmail
+      done.firstChild.removeAttribute('id');
+
       // Manually add on-click event to done elment
-      done.addEventListener("click", evt => {
-        window.location = evt.target.querySelector("a").href;
-      });
+      done.addEventListener('click', () => window.location.assign('https://mail.google.com/mail/u/0/#search/-is%3Ainbox'));
 
       const newNode = document.createElement('div');
       newNode.classList.add('TK');
@@ -62,10 +66,22 @@ const reorderMenuItems = () => {
       refer.appendChild(sent);
       refer.appendChild(trash);
       refer.appendChild(spam);
+      bindEventToMenuItems(menuItemNodes);
       observer.disconnect();
     }
   });
   observer.observe(document.body, {subtree:true, childList:true});
+};
+
+const activeMenuItem = (target, nodes) => {
+  nodes.map(node => node.firstChild.classList.remove('nZ'));
+  target.firstChild.classList.add('nZ');
+};
+
+const bindEventToMenuItems = (nodes) => {
+  nodes.map(node =>
+    node.addEventListener('click', () => activeMenuItem(node, nodes))
+  );
 };
 
 const toggleTheme = () => {

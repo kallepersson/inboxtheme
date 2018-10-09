@@ -42,7 +42,7 @@ body._in,
 ._in[data-hash="#inbox"] header { background-color: #4285f4 !important; }
 ._in[data-hash="#starred"] header { background-color: #FDB500 !important; }
 ._in[data-hash="#snoozed"] header { background-color: #ef6c00 !important; }
-._in[data-hash="#all"] header { background-color: #0f9d58 !important; }
+._in[data-hash="#search/-is%3Ainbox"] header { background-color: #0f9d58 !important; }
 
 /* Toolbar shadow */
 ._in header:before {
@@ -282,9 +282,11 @@ body._in,
 }
 .TO.nZ .n0 {
   color: #212121 !important;
+  outline: none;
 }
 .TO .n0 {
   color: #616161 !important;
+  outline: none;
 }
 
 /**
