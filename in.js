@@ -3,23 +3,42 @@ _styleElement.innerText = _css;
 
 const init = (evt) => {
   document.head.appendChild(_styleElement);
+  reorderMenuItems();
   updateTitle();
   toggleTheme();
-  reorderMenuItems();
 }
+
+const menuItems = [
+  { label: 'inbox',     className: '.aHS-bnt' },
+  { label: 'snoozed',   className: '.aHS-bu1' },
+  { label: 'done',      className: '.aHS-aHO' },
+  { label: 'drafts',    className: '.aHS-bnq' },
+  { label: 'sent',      className: '.aHS-bnu' },
+  { label: 'spam',      className: '.aHS-bnv' },
+  { label: 'trash',     className: '.aHS-bnx' },
+  { label: 'starred',   className: '.aHS-bnw' },
+  { label: 'important', className: '.aHS-bns' },
+  { label: 'chats',     className: '.aHS-aHP' },
+];
 
 const reorderMenuItems = () => {
   const observer = new MutationObserver(() => {
     const parent = document.querySelector('.wT .byl');
     const refer = document.querySelector('.wT .byl>.TK');
-    const inbox = queryParentSelector(document.querySelector('.aHS-bnt'), '.aim');
-    const snoozed = queryParentSelector(document.querySelector('.aHS-bu1'), '.aim');
-    const done = queryParentSelector(document.querySelector('.aHS-aHO'), '.aim');
-    const drafts = queryParentSelector(document.querySelector('.aHS-bnq'), '.aim');
-    const sent = queryParentSelector(document.querySelector('.aHS-bnu'), '.aim');
-    const spam = queryParentSelector(document.querySelector('.aHS-bnv'), '.aim');
-    const trash = queryParentSelector(document.querySelector('.aHS-bnx'), '.aim');
-    if (parent && refer && inbox && snoozed && done) {
+
+    const menuItemNodes = menuItems.map(({ className }) =>
+      queryParentSelector(document.querySelector(className), '.aim')
+    );
+    const [
+      inbox, snoozed, done, drafts, sent,
+      spam, trash, starred, important, chats
+    ] = menuItemNodes;
+
+    if (
+      parent && refer &&
+      inbox && snoozed && done && drafts && sent &&
+      spam && trash && starred && important && chats
+    ) {
       /* Gmail will execute its script to add element to the first child, so
        * add one placeholder for it and do the rest in the next child.
        */
@@ -27,10 +46,14 @@ const reorderMenuItems = () => {
       placeholder.classList.add('TK');
       placeholder.style.cssText = 'padding: 0; border: 0;';
 
+      // Assign link href which only show archived mail
+      done.querySelector('a').href = '#search/-is%3Ainbox';
+
+      // Remove id attribute from done element for preventing event override from Gmail
+      done.firstChild.removeAttribute('id');
+
       // Manually add on-click event to done elment
-      done.addEventListener("click", evt => {
-        window.location = evt.target.querySelector("a").href;
-      });
+      done.addEventListener('click', () => window.location.assign('#search/-is%3Ainbox'));
 
       const newNode = document.createElement('div');
       newNode.classList.add('TK');
@@ -43,10 +66,22 @@ const reorderMenuItems = () => {
       refer.appendChild(sent);
       refer.appendChild(trash);
       refer.appendChild(spam);
+      bindEventToMenuItems(menuItemNodes);
       observer.disconnect();
     }
   });
   observer.observe(document.body, {subtree:true, childList:true});
+};
+
+const activeMenuItem = (target, nodes) => {
+  nodes.map(node => node.firstChild.classList.remove('nZ'));
+  target.firstChild.classList.add('nZ');
+};
+
+const bindEventToMenuItems = (nodes) => {
+  nodes.map(node =>
+    node.addEventListener('click', () => activeMenuItem(node, nodes))
+  );
 };
 
 const toggleTheme = () => {
