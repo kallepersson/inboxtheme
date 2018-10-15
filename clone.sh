@@ -7,6 +7,10 @@ while sleep 1; do
 	#echo $(date +"%H:%M:%S") >> in-min.js
 	#echo "';}"  >> in-min.js
 	echo "\`;"  >> in-min.js
+  cat src/predef.js >> in-min.js
+  cat src/nodes.js >> in-min.js
+  cat src/mail.js >> in-min.js
+  cat src/menu.js >> in-min.js
 	cat in.js >> in-min.js
 	echo "})();" >> in-min.js
 done
