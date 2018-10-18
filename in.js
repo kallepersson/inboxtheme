@@ -4,7 +4,6 @@ _styleElement.innerText = _css;
 const init = (evt) => {
   document.head.appendChild(_styleElement);
   nodesInit();
-  mailInit();
   menuInit();
   updateTitle();
   toggleTheme();
