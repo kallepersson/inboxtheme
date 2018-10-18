@@ -6,11 +6,6 @@ const init = (evt) => {
   nodesInit();
   menuInit();
   updateTitle();
-  toggleTheme();
-}
-
-const toggleTheme = () => {
-  document.body.classList.toggle("_in");
 }
 
 const updateTitle = () => {
@@ -75,13 +70,6 @@ const archiveMessageRow = (elm) => {
     archiveButton.click();
   }
 }
-
-document.addEventListener("dblclick", (evt) => {
-  // temp toggling for now
-  if (evt.target.classList.contains("gb_Ed")) {
-    toggleTheme();
-  }
-});
 
 const handleSweepButtonClick = (evt) => {
   let section = queryParentSelector(evt.target, ".aDM");
