@@ -15,7 +15,7 @@ const toggleTheme = () => {
 
 const updateTitle = () => {
   const observer = new MutationObserver(() => {
-    const { title } = nodes;
+    const { title } = _nodes;
     let linkElements = document.querySelectorAll(".aim .n0");
     if (title && linkElements.length > 0) {
       handleHashChange();
@@ -28,7 +28,7 @@ const updateTitle = () => {
 const handleHashChange = (evt) => {
   let hash = window.location.hash;
   document.body.dataset.hash = hash;
-  const { title } = nodes;
+  const { title } = _nodes;
   let linkElement = document.querySelector(`.aim a[href$="${hash}"]`);
   if (!title || !linkElement) {
     return;

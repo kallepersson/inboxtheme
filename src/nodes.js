@@ -1,4 +1,4 @@
-const nodes = {};
+const _nodes = {};
 
 const getNodes = () => {
   const observer = new MutationObserver(() => {
@@ -17,7 +17,7 @@ const getNodes = () => {
     ].map(({ label, selector }) => {
       const node = queryParentSelector(document.querySelector(selector), '.aim');
       if (node) {
-        nodes[label] = node;
+        _nodes[label] = node;
       }
     });
 
@@ -36,7 +36,7 @@ const getNodes = () => {
     ].map(({ label, selector }) => {
       const node = document.querySelector(selector);
       if (node) {
-        nodes[label] = node;
+        _nodes[label] = node;
       }
     });
   });

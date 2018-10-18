@@ -5,7 +5,7 @@ const reorderMenuItems = () => {
     const {
       inbox, snoozed, done, drafts, sent,
       spam, trash, starred, important, chats,
-    } = nodes;
+    } = _nodes;
 
     if (
       parent && refer &&
