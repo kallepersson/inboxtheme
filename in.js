@@ -15,9 +15,9 @@ const toggleTheme = () => {
 
 const updateTitle = () => {
   const observer = new MutationObserver(() => {
-    let titleElement = document.querySelector("a.gb_De");
+    const { title } = nodes;
     let linkElements = document.querySelectorAll(".aim .n0");
-    if ( titleElement && linkElements.length > 0) {
+    if (title && linkElements.length > 0) {
       handleHashChange();
       observer.disconnect();
     }
@@ -28,19 +28,19 @@ const updateTitle = () => {
 const handleHashChange = (evt) => {
   let hash = window.location.hash;
   document.body.dataset.hash = hash;
+  const { title } = nodes;
   let linkElement = document.querySelector(`.aim a[href$="${hash}"]`);
-  let titleElement = document.querySelector("a.gb_De");
-  if (!titleElement || !linkElement) {
+  if (!title || !linkElement) {
     return;
   }
-  let titleSpan = titleElement.querySelector("._inTitle")
+  let titleSpan = title.querySelector("._inTitle")
   if (!titleSpan) {
     titleSpan = document.createElement("span");
     titleSpan.classList.add("_inTitle");
-    titleElement.appendChild(titleSpan);
+    title.appendChild(titleSpan);
   }
   titleSpan.innerText = linkElement.innerText;
-  titleElement.href = linkElement.href;
+  title.href = linkElement.href;
   setupSweepButtons();
 }
 

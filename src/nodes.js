@@ -23,6 +23,7 @@ const getNodes = () => {
 
     // others
     [
+      { label: 'title',          selector: 'a.gb_Ee' },
       { label: 'back',           selector: '.lS'     },
       { label: 'archive',        selector: '.lR'     },
       { label: 'resportSpam',    selector: '.nN'     },
