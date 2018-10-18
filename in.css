@@ -85,7 +85,7 @@ body._in,
 }
 
 /* Toolbar left column (inbox title) */
-.gb_Zd.gb_Be {
+._in .gb_Zd.gb_Be {
   position: absolute !important;
   left: 8px !important;
   top: 8px !important;
@@ -97,11 +97,20 @@ body._in,
   max-width: unset;
   border-radius: 2px !important;
   background: rgba(255, 255, 255, .15) !important;
-  margin: 0 auto;
+  margin: 0 auto !important;
 }
-._in .gb_Vd.gb_6d .gb_Sd .gb_Te {
-  margin-left: auto;
-  margin-right: auto;
+
+@media (max-width: 1632px) {
+  ._in .gb_Te {
+    max-width: 70% !important;
+    width: auto;
+  }
+}
+
+@media (max-width: 990px) {
+  ._in .gb_Te {
+    max-width: 50% !important;
+  }
 }
 
 /* Toolbar input field */
