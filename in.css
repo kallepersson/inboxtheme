@@ -75,7 +75,7 @@ body._in,
   display: block;
 }
 
-._in .gb_Ta a.gb_De {
+._in .gb_Ta a.gb_Ee {
   margin-top: -4px;
   display: block;
   -webkit-font-smoothing: antialiased;
@@ -85,27 +85,27 @@ body._in,
 }
 
 /* Toolbar left column (inbox title) */
-.gb_Zd.gb_Ae {
+.gb_Zd.gb_Be {
   position: absolute !important;
   left: 8px !important;
   top: 8px !important;
 }
 
 /* Toolbar form */
-._in .gb_Se {
+._in .gb_Te {
   width: 1200px;
   max-width: unset;
   border-radius: 2px !important;
   background: rgba(255, 255, 255, .15) !important;
   margin: 0 auto;
 }
-._in .gb_Vd.gb_6d .gb_Sd .gb_Se {
+._in .gb_Vd.gb_6d .gb_Sd .gb_Te {
   margin-left: auto;
   margin-right: auto;
 }
 
 /* Toolbar input field */
-._in .gb_bf {
+._in .gb_cf {
   filter: invert(100%);
 }
 
