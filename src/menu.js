@@ -39,7 +39,7 @@ const reorderMenuItems = () => {
       refer.appendChild(sent);
       refer.appendChild(trash);
       refer.appendChild(spam);
-      bindEvent([
+      setupClickEventForNodes([
         inbox, snoozed, done, drafts, sent,
         spam, trash, starred, important, chats,
       ]);
@@ -49,19 +49,19 @@ const reorderMenuItems = () => {
   observer.observe(document.body, {subtree:true, childList:true});
 };
 
-const activeMenuItem = (target, nodes) => {
+const activateMenuItem = (target, nodes) => {
   nodes.map(node => node.firstChild.classList.remove('nZ'));
   target.firstChild.classList.add('nZ');
 };
 
-const bindEvent = (nodes) => {
+const setupClickEventForNodes = (nodes) => {
   nodes.map(node =>
     node.addEventListener('click', () =>
-      activeMenuItem(node, nodes)
+      activateMenuItem(node, nodes)
     )
   );
 };
 
-const menuInit = () => {
+const initMenu = () => {
   reorderMenuItems();
 };

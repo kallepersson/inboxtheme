@@ -1,6 +1,6 @@
 const _nodes = {};
 
-const getNodes = () => {
+const setupNodes = () => {
   const observer = new MutationObserver(() => {
     // menu items
     [
@@ -41,8 +41,4 @@ const getNodes = () => {
     });
   });
   observer.observe(document.body, {subtree:true, childList:true});
-};
-
-const nodesInit = () => {
-  getNodes();
 };

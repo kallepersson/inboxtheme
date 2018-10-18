@@ -3,9 +3,10 @@ _styleElement.innerText = _css;
 
 const init = (evt) => {
   document.head.appendChild(_styleElement);
-  nodesInit();
-  menuInit();
+  setupNodes();
+  initMenu();
   updateTitle();
+  document.body.classList.toggle("_in");
 }
 
 const updateTitle = () => {
