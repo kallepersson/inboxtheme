@@ -23,7 +23,7 @@ const setupNodes = () => {
 
     // others
     [
-      { label: 'title',          selector: 'a.gb_Ee' },
+      { label: 'title',          selector: 'a.gb_Je' },
       { label: 'back',           selector: '.lS'     },
       { label: 'archive',        selector: '.lR'     },
       { label: 'resportSpam',    selector: '.nN'     },
