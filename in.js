@@ -30,6 +30,7 @@ const handleHashChange = (evt) => {
     return;
   }
   let titleSpan = title.querySelector("._inTitle")
+  title.innerHTML = '';
   if (!titleSpan) {
     titleSpan = document.createElement("span");
     titleSpan.classList.add("_inTitle");
