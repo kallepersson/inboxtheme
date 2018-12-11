@@ -73,6 +73,8 @@ body._in,
 
 ._in ._inTitle {
   display: block;
+  font-size: 1.5em;
+  color: #fff;
 }
 
 ._in a.gb_Je {
@@ -92,7 +94,7 @@ body._in,
 }
 
 /* Toolbar form */
-._in .gb_Xe {
+._in form#aso_search_form_anchor {
   width: 1200px;
   max-width: unset;
   border-radius: 2px !important;
@@ -101,20 +103,20 @@ body._in,
 }
 
 @media (max-width: 1632px) {
-  ._in .gb_Xe {
+  ._in form#aso_search_form_anchor {
     max-width: 70% !important;
     width: auto;
   }
 }
 
 @media (max-width: 990px) {
-  ._in .gb_Xe {
+  ._in form#aso_search_form_anchor {
     max-width: 50% !important;
   }
 }
 
 /* Toolbar input field */
-._in .gb_gf {
+._in input[name="q"] {
   filter: invert(100%);
 }
 

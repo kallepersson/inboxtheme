@@ -12,7 +12,7 @@ const init = (evt) => {
 const updateTitle = () => {
   const observer = new MutationObserver(() => {
     const { title } = _nodes;
-    let linkElements = document.querySelectorAll(".aim .n0");
+    let linkElements = document.querySelectorAll(".aim a");
     if (title && linkElements.length > 0) {
       handleHashChange();
       observer.disconnect();
@@ -29,13 +29,11 @@ const handleHashChange = (evt) => {
   if (!title || !linkElement) {
     return;
   }
-  let titleSpan = title.querySelector("._inTitle")
   title.innerHTML = '';
-  if (!titleSpan) {
-    titleSpan = document.createElement("span");
-    titleSpan.classList.add("_inTitle");
-    title.appendChild(titleSpan);
-  }
+  title.style = 'text-decoration: none;';
+  titleSpan = document.createElement("span");
+  titleSpan.classList.add("_inTitle");
+  title.appendChild(titleSpan);
   titleSpan.innerText = linkElement.innerText;
   title.href = linkElement.href;
   setupSweepButtons();
