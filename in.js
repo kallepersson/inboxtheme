@@ -29,13 +29,11 @@ const handleHashChange = (evt) => {
   if (!title || !linkElement) {
     return;
   }
-  let titleSpan = title.querySelector("._inTitle")
   title.innerHTML = '';
-  if (!titleSpan) {
-    titleSpan = document.createElement("span");
-    titleSpan.classList.add("_inTitle");
-    title.appendChild(titleSpan);
-  }
+  title.style = 'text-decoration: none;';
+  titleSpan = document.createElement("span");
+  titleSpan.classList.add("_inTitle");
+  title.appendChild(titleSpan);
   titleSpan.innerText = linkElement.innerText;
   title.href = linkElement.href;
   setupSweepButtons();
