@@ -61,10 +61,6 @@ body._in,
   opacity: 1 !important;
 }
 
-._in header .gb_af svg {
-  color: #000 !important;
-}
-
 /* Toolbar title */
 
 ._inTitle {
@@ -104,14 +100,15 @@ body._in,
 
 @media (max-width: 1632px) {
   ._in form#aso_search_form_anchor {
-    max-width: 70% !important;
+    max-width: 100% !important;
     width: auto;
   }
 }
 
 @media (max-width: 990px) {
   ._in form#aso_search_form_anchor {
-    max-width: 50% !important;
+    max-width: 100% !important;
+    width: auto;
   }
 }
 
@@ -139,10 +136,6 @@ body._in,
     margin-left: 272px !important;
     margin-right: 180px !important;
   }
-}
-
-._in header .gb_af input {
-  filter: invert(0);
 }
 
 
