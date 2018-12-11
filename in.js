@@ -12,7 +12,7 @@ const init = (evt) => {
 const updateTitle = () => {
   const observer = new MutationObserver(() => {
     const { title } = _nodes;
-    let linkElements = document.querySelectorAll(".aim .n0");
+    let linkElements = document.querySelectorAll(".aim a");
     if (title && linkElements.length > 0) {
       handleHashChange();
       observer.disconnect();

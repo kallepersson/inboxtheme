@@ -23,7 +23,7 @@ const setupNodes = () => {
 
     // others
     [
-      { label: 'title',          selector: 'a.gb_Je' },
+      { label: 'title',          selector: 'a[title="Gmail"]:not([aria-label])' },
       { label: 'back',           selector: '.lS'     },
       { label: 'archive',        selector: '.lR'     },
       { label: 'resportSpam',    selector: '.nN'     },
