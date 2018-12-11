@@ -454,4 +454,7 @@ body._in,
   font-size: 14;
 }
 
+/* Mail highlight bar */
+.zA>.PE.PF::before {
+  left: -1px;
 }
