@@ -30,6 +30,7 @@ body._in,
 ._in .aeJ /* Middle section */,
 ._in .brC-aT5-aOt-Jw /* Right Sidebar */{
   background: transparent !important;
+  padding: 0 5px;
 }
 
 
@@ -59,10 +60,6 @@ body._in,
 ._in header svg {
   color: #fff !important;
   opacity: 1 !important;
-}
-
-._in header .gb_af svg {
-  color: #000 !important;
 }
 
 /* Toolbar title */
@@ -104,14 +101,15 @@ body._in,
 
 @media (max-width: 1632px) {
   ._in form#aso_search_form_anchor {
-    max-width: 70% !important;
+    max-width: 100% !important;
     width: auto;
   }
 }
 
 @media (max-width: 990px) {
   ._in form#aso_search_form_anchor {
-    max-width: 50% !important;
+    max-width: 100% !important;
+    width: auto;
   }
 }
 
@@ -139,10 +137,6 @@ body._in,
     margin-left: 272px !important;
     margin-right: 180px !important;
   }
-}
-
-._in header .gb_af input {
-  filter: invert(0);
 }
 
 
@@ -389,8 +383,11 @@ body._in,
 }
 
 /* Section row list table */
-._in .UI table {
+._in .UI[gh="tl"] table {
   box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0,0,0,.12), 0 2px 4px rgba(0,0,0,.24);
+}
+._in .UI table {
+  box-shadow: none;
 }
 
  /* Message row */
@@ -455,4 +452,9 @@ body._in,
   color: #fff;
   font-family: monospace;
   font-size: 14;
+}
+
+/* Mail highlight bar */
+.zA>.PE.PF::before {
+  left: -1px;
 }
