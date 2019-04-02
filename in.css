@@ -68,9 +68,12 @@ body._in,
 }
 
 ._in ._inTitle {
-  display: block;
-  font-size: 1.5em;
   color: #fff;
+  display: block;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-size: 1.5em;
+  margin: -7px 0 0 8px;
+  -webkit-font-smoothing: antialiased;
 }
 
 ._in a.gb_Je {
