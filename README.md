@@ -8,13 +8,18 @@ This Google Chrome extension brings Gmail closer to Inbox's visual style. While 
 
 ### Recommended Settings
 
-- Use default theme
+For presenting the inbox-like theme, follow the steps below:
+
+#### Use default theme
+
 ![theme](https://user-images.githubusercontent.com/579145/54892082-14843300-4eeb-11e9-87e7-3aaf7480d1f0.png)
 
-- Show all system labels
+#### Show all system labels
+
 ![system-labels](https://user-images.githubusercontent.com/579145/54892033-de46b380-4eea-11e9-821c-31ce107acd11.png)
 
-- Set inbox type to default
+#### Set inbox type to default
+
 ![inbox-type](https://user-images.githubusercontent.com/579145/54892134-4c8b7600-4eeb-11e9-9df7-fe200abc96c8.png)
 
 # Reporting issues & Contributing
