@@ -12,10 +12,14 @@ This Google Chrome extension brings Gmail closer to Inbox's visual style. While 
 ![theme](https://user-images.githubusercontent.com/579145/54892082-14843300-4eeb-11e9-87e7-3aaf7480d1f0.png)
 
 - Show all system labels
+
 ![system-labels](https://user-images.githubusercontent.com/579145/54892033-de46b380-4eea-11e9-821c-31ce107acd11.png)
 
 - Set inbox type to default
 ![inbox-type](https://user-images.githubusercontent.com/579145/54892134-4c8b7600-4eeb-11e9-9df7-fe200abc96c8.png)
+
+- Hide importance marker
+![hide-important](https://user-images.githubusercontent.com/538925/55816835-141d9780-5aa8-11e9-944f-39c2b9d00958.png)
 
 # Reporting issues & Contributing
 As this extension is likely to break when significant updates are made to Gmail, please [report issues](https://github.com/kallepersson/inboxtheme/issues). Pull requests are welcome!
