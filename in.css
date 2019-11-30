@@ -38,7 +38,7 @@ body._in,
  **/
 
 /* Toolbar background */
-._in header { background-color: #898984 !important; }
+._in[data-hash*="#"] header { background-color: #898984 !important; }
 ._in[data-hash*="#inbox"] header { background-color: #4285f4 !important; }
 ._in[data-hash*="#starred"] header { background-color: #FDB500 !important; }
 ._in[data-hash*="#snoozed"] header { background-color: #ef6c00 !important; }
